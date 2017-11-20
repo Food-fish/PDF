@@ -27,7 +27,7 @@ import com.itextpdf.text.pdf.PdfWriter;
  * @return  
 */
 public class Table {
-	private static final String address="G:\\\\";
+	private static final String address="E:\\\\";
     String[] tableHeader= { "姓名", "性别", "年龄", "学院", "专业", "年级"}; 
     String[] tableCont= { "姓名1", "性别1", "年龄1", "学院1", "专业1", "年级1"}; 
 	//@Test
@@ -60,7 +60,7 @@ public class Table {
         datatable.getDefaultCell().setHorizontalAlignment(Element.ALIGN_CENTER);
         // PdfPTable[PdfPCell[Paragraph]]  
         // 添加表头元素  
-        for (int i = 0; i < colNumber; i++) {  
+        for (int i = 0; i < colNumber; i++) {
             datatable.addCell(new Paragraph(tableHeader[i], fontChinese));  
         }  
         // 添加表格的内容  

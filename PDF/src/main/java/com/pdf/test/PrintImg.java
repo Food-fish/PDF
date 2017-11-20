@@ -26,13 +26,13 @@ import com.itextpdf.text.pdf.PdfWriter;
  * @return  
 */
 public class PrintImg {
-	private static final String address="G:\\\\";
+	private static final String address="E:\\\\";
 	
 	@Test
 	public void insertObject() throws Exception {  
 		  
         Document document = new Document(PageSize.A4);  
-        PdfWriter.getInstance(document, new FileOutputStream(address+"pdfText4.pdf"));  
+        PdfWriter.getInstance(document, new FileOutputStream(address+"pdfText1.pdf"));  
         document.open();  
   
         // Anchor超链接和锚点对象: internal and external links  
@@ -49,14 +49,14 @@ public class PrintImg {
         document.add(toUS);  
   
         // 图片Image对象  
-        Image img = Image.getInstance("D:/BaiduNetdiskDownload/图片/RNB13 图包/001.jpg");  
+       /* Image img = Image.getInstance("D:/BaiduNetdiskDownload/图片/RNB13 图包/001.jpg");  
         img.setAlignment(Image.LEFT);  
         img.setBorder(Image.BOX);  
         img.setBorderWidth(10);  
         img.setBorderColor(BaseColor.WHITE);  
         img.scaleToFit(1000, 72);// 大小  
         img.setRotationDegrees(-30);// 旋转  
-        document.add(img);  
+        document.add(img); */ 
   
         // Chapter, Section对象（目录对象）  
         Paragraph title = new Paragraph("一级标题", getChineseFont());  

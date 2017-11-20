@@ -27,7 +27,7 @@ import com.itextpdf.text.pdf.PdfWriter;
  * @return  
 */
 public class Article {
-	private static final String address="G:\\\\";
+	private static final String address="E:\\\\";
 	//设置页数，添加附加属性
 	//@Test
 	public void Article1() throws Exception{
@@ -123,7 +123,7 @@ public class Article {
 	@Test
 	public void addContent() throws Exception {  
         Document document = new Document(PageSize.A4);  
-        PdfWriter.getInstance(document, new FileOutputStream(address+"pdfText3.pdf"));  
+        PdfWriter.getInstance(document, new FileOutputStream(address+"pdfText6.pdf"));  
         document.open();  
         System.out.println(new Chunk("中文输出： ", getChineseFont()));
         // 1-Chunk块对象: a String, a Font, and some attributes  
@@ -161,7 +161,7 @@ public class Article {
         director2.add(name2);  
         director2.add(new Chunk(","));  
         director2.add(new Chunk(" "));  
-        director2.add(new Chunk("japanese上浮下", getChineseFont()).setTextRise(3f));  
+        director2.add(new Chunk("japanese上浮下", getChineseFont()).setTextRise(5f));  
         director2.setLeading(24);  
         document.add(director2);  
   
